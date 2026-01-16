@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MatemAI-tica Lav | Il tuo AI Math Tutor</title>
+    <title>MatemAI-tica Lav | Il tuo AI Math Tutor Professionale</title>
     
     <meta name="description" content="Risolvi esercizi di matematica con l'intelligenza artificiale. Spiegazioni passo-passo semplici e chiare.">
     <meta name="theme-color" content="#4f46e5">
@@ -18,9 +18,16 @@
             fontFamily: {
               jakarta: ['Plus Jakarta Sans', 'sans-serif'],
             },
-            screens: {
-              'xs': '375px',
-            },
+            colors: {
+              brand: {
+                50: '#f5f7ff',
+                100: '#ebf0fe',
+                200: '#ced9fd',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+              }
+            }
           }
         }
       }
@@ -31,6 +38,7 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             transition: background-color 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .no-scrollbar::-webkit-scrollbar {
@@ -41,10 +49,21 @@
             scrollbar-width: none;
         }
 
-        /* Effetti hover sulle sidebar cards */
-        .sidebar-item-active {
-            border-left: 3px solid #4f46e5;
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-chat { animation: slideIn 0.3s ease-out forwards; }
     </style>
 <script type="importmap">
 {
@@ -57,7 +76,7 @@
 }
 </script>
 </head>
-<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white">
     <div id="root"></div>
 </body>
 </html>
