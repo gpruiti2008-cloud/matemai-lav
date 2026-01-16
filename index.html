@@ -3,19 +3,11 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>MatemAI-tica Lav</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MatemAI-tica Lav | Il tuo AI Math Tutor</title>
     
-    <!-- PWA & Mobile Optimization -->
+    <meta name="description" content="Risolvi esercizi di matematica con l'intelligenza artificiale. Spiegazioni passo-passo semplici e chiare.">
     <meta name="theme-color" content="#4f46e5">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="MatemAILav">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/5341/5341351.png">
-    <link rel="manifest" href="manifest.json">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,14 +28,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         
-        :root {
-            --safe-area-inset-bottom: env(safe-area-inset-bottom);
-        }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            overscroll-behavior-y: contain;
-            -webkit-tap-highlight-color: transparent;
             transition: background-color 0.3s ease;
         }
 
@@ -55,18 +41,9 @@
             scrollbar-width: none;
         }
 
-        /* Padding extra per i telefoni con notch/barra gesture */
-        footer {
-            padding-bottom: calc(1.5rem + var(--safe-area-inset-bottom)) !important;
-        }
-
-        /* Animazioni fluide */
-        @keyframes slideUp {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .animate-app-in {
-            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Effetti hover sulle sidebar cards */
+        .sidebar-item-active {
+            border-left: 3px solid #4f46e5;
         }
     </style>
 <script type="importmap">
@@ -80,7 +57,7 @@
 }
 </script>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white">
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white">
     <div id="root"></div>
 </body>
 </html>
